@@ -1,12 +1,20 @@
 {% extends 'base.html'%}
-
 {% block content %}
+<style>
+    .box{
+        background-color: #9a98bb;
+    }
+</style>
 
-<h1>This is dashboard - {{ var }} </h1>
-<!-- <h1>This is df : {{ df }} </h1> -->
-<h1>This is cur_bal - {{ cur_bal }} </h1>
-<h1>This is need - {{ need }} </h1>
-<!-- <img src={{ url }} alt="image here /." /> -->
-<!-- <div style="background-image: url('file:///home/aashay/code/Python-Projects/finantialanalyser/balance.jpg');">  -->
-<div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+<div class='box'>
+
+    <h1>This is dashboard - {{ var }} </h1><br>
+    <!-- <h1>This is df : {{ df }} </h1> -->
+    <h1>This is cur_bal - {{ cur_bal }} </h1><br>
+    <h1>This is need - {{ need }} </h1><br>
+    <!-- <img src="" alt="image here /." /> -->
+    <!-- <div style="background-image: url('file:///home/aashay/code/Python-Projects/finantialanalyser/balance.jpg');">  -->
+</div>
+
 {% endblock %}

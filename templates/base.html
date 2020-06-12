@@ -7,10 +7,40 @@
     <title>Finantial Analyser</title>
 </head>
 
-<body bgcolor="#cabfaf">
-    <a href="/">Go Home</a>
-    <a href="/plans">Plans</a>
-    <a href="/dashboard">Dashboard</a>
+<style>
+    #panel {
+        background-color: #4c1873;
+        width: max-content;
+        height: 1000px;
+
+    }
+
+    #panel ul li {
+
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    #panel ul li a {
+        color: white;
+
+    }
+
+    body {
+        background-color: #cabfaf;
+        display: flex;
+    }
+</style>
+
+
+<body>
+    <div id="panel">
+        <ul>
+            <li><a href="/">Go Home</a></li>
+            <li><a href="/plans">Plans</a></li>
+            <li><a href="/dashboard">Dashboard</a></li>
+        </ul>
+    </div>
 
     {% block content %}
 

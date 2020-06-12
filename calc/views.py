@@ -24,7 +24,7 @@ def dashboard(request):
     print("Still need :Rs",200000-cur_bal)
 
     plt.figure(figsize=(11,5)) 
-    plt.plot(x,y,marker='P')
+    # plt.plot(x,y,marker='P')
     plt.xlabel('Date',fontsize = 15)
     plt.ylabel('Balance',rotation=90,fontsize = 15)
 
@@ -34,13 +34,18 @@ def dashboard(request):
 
     # plt.show()
 
+    # figure1 = io.BytesIO()
+    plt.plot(x,y,marker='P')
+    # plt.savefig(figure1, format="png")
+    # content_file = ImageFile(figure)
+
     return render(request,'dashboard.html',
     {
         "var":"30",
         "df":df,
         "cur_bal":cur_bal,
         "need":(200000-cur_bal),
-        "url":"file:///home/aashay/code/Python-Projects/finantialanalyser/me.jpg"
+        "url":"./balance.jpg"
     })
 
 def plan(request):

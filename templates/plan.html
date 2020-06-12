@@ -1,0 +1,53 @@
+{% extends 'base.html'%}
+{% block content %}
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<style>
+    .td-border {
+        border: 2px solid black;
+        margin: 0px;
+        padding: 5px;
+    }
+
+    .plan-list {
+        background-image: linear-gradient(#5bd2d6, white);
+        box-shadow: 3px 8px #f3f3f3;
+        padding: 10px;
+        border: 2px solid;
+        width: 71%;
+        border-radius: 10px;
+    }
+
+    body {
+        background-color: black;
+    }
+</style>
+
+
+<div class="container">
+
+    <div class="plan-list">
+        <h1>Listing Number of Plans -{{ number }}</h1>
+        <table style="border-collapse: collapse;">
+            <thead>
+                <tr>
+                    <td class='td-border'>Sl No</td>
+                    <td class='td-border'>Name</td>
+                    <td class='td-border'>Days Left</td>
+                    <td class='td-border'>Update</td>
+                    <td class='td-border'>Remove</td>
+                </tr>
+            </thead>
+        </table>
+        <br>
+        <button onclick=display() type="button" class="btn btn-success">Add New Plan</button>
+    </div>
+
+</div>
+<script>
+    function display() {
+        window.alert('Button clicked !')
+    }
+</script>
+{% endblock %}

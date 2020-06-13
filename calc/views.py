@@ -51,4 +51,14 @@ def dashboard(request):
 def plan(request):
     return render(request,'plan.html',{'number':'2'})
 
+def form(request):
+    
+    return render(request,'form.html')
+
+def result(request):
+    num1 = int(request.GET['num1'])
+    num2 = int(request.GET['num2'])
+    result = num1+num2
+    return render(request,'result.html',{'result':result})
+
 

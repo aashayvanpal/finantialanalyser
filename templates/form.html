@@ -1,0 +1,22 @@
+{% extends 'base.html'%}
+{% block content %}
+<style>
+    .box{
+        background-color: grey;
+        height: fit-content;
+        margin-left: 20px;
+    }
+</style>
+
+<div class='box'>
+
+    <form action="result">
+        <h1>Add 2 numbers </h1><br>
+        Enter 1st number : &nbsp;<input type="text" name="num1"><br>
+        Enter 2nd number : <input type="text" name="num2"><br>
+        <input type="submit">
+    </form>
+    <br>
+</div>
+
+{% endblock %}

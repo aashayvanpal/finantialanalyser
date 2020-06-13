@@ -1,7 +1,7 @@
 {% extends 'base.html'%}
 {% block content %}
 <style>
-    .box{
+    .box {
         background-color: grey;
         height: fit-content;
         margin-left: 20px;
@@ -10,7 +10,8 @@
 
 <div class='box'>
 
-    <form action="result">
+    <form action="result" method="POST">
+        {% csrf_token %}
         <h1>Add 2 numbers </h1><br>
         Enter 1st number : &nbsp;<input type="text" name="num1"><br>
         Enter 2nd number : <input type="text" name="num2"><br>

@@ -14,8 +14,9 @@
         background-image: linear-gradient(#4f3073, white);
         box-shadow: 3px 8px #f3f3f3;
         padding: 10px;
+        margin: 10px;
         border: 2px solid;
-        width: 71%;
+        width: 78%;
         border-radius: 10px;
         color: black;
     }
@@ -28,6 +29,58 @@
         color: #fff;
         background-color: #4f3073;
         border-color: #4f3073;
+    }
+
+
+    #row {
+        /* background-color: blue; */
+        display: inline-flex;
+        /* margin: 10px; */
+    }
+
+    #col1 {
+        background-color: green;
+        margin: 5px;
+        text-align: center;
+        padding: 20px;
+        width: 100px;
+        border: 2px solid;
+        border-radius: 10px;
+        border-color: black;
+    }
+
+    #col1:hover {
+        background-color: #5cbf24;
+        cursor: pointer;
+    }
+
+    #col2 {
+        background-color: red;
+        margin: 5px;
+        border-radius: 10px;
+        padding: 20px;
+        text-align: center;
+        width: 100px;
+        border: 2px solid black;
+    }
+
+    #col2:hover {
+        background-color: #ff000099;
+        cursor: pointer;
+    }
+
+    #box-plans {
+        width: min-content;
+        background-color: #dadada;
+        border: 2px solid;
+        border-radius: 5px;
+        color: white;
+        border-color: black;
+    }
+
+    .container{
+        display: flex;
+        height: fit-content;
     }
 </style>
 
@@ -50,11 +103,26 @@
         <br>
         <button onclick=display() type="button" class="btn btn-success">Add New Plan</button>
     </div>
+    <div id='box-plans'>
+        <div id='row'>
+            <button id='col1' onclick=empClick()>Employees</button></br>
+            <div id="col2">Large Business</div></br>
+        </div>
+        <div id='row'>
+            <div id="col1">Small Business</div>
+            <div id="col2">Investments</div>
+        </div>
+
+    </div>
+
 
 </div>
-<script>
+<script type="text/javascript">
     function display() {
         window.alert('Button clicked !')
+    }
+    function empClick() {
+        alert('Employee clicked!')
     }
 </script>
 {% endblock %}

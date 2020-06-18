@@ -26,26 +26,62 @@
 
     }
 
-    body {
-        background-color: #cabfaf;
+    #item-flex {
         display: flex;
+
+    }
+
+    #header {
+        background-color: #D1B2CE;
+        height: 60px;
+        display: flex;
+    }
+
+    #burger {
+        background-color: #D1B2CE;
+        width: fit-content;
+        top: 50%;
+    }
+
+    #bar {
+        height: 5px;
+        background-color: black;
+        width: 50px;
+        margin: 5px;
+    }
+
+    body {
+        background-color: #AC43A2;
+        margin: 0px;
     }
 </style>
 
 
 <body>
-    <div id="panel">
-        <ul>
-            <li><a href="/">Go Home</a></li>
-            <li><a href="/dashboard">Dashboard</a></li>
-            <li><a href="/plans">Plans</a></li>
-            <li><a href="/form">Addition</a></li>
-        </ul>
+    <div id="header">
+        <div id="burger">
+            <div id="bar"></div>
+            <div id="bar"></div>
+            <div id="bar"></div>
+        </div>
+        This is heading
+    </div>
+    <div id="item-flex">
+
+        <div id="panel">
+            <ul>
+                <li><a href="/">Go Home</a></li>
+                <li><a href="/dashboard">Dashboard</a></li>
+                <li><a href="/plans">Plans</a></li>
+                <li><a href="/form">Addition</a></li>
+            </ul>
+        </div>
+
+        {% block content %}
+
+        {% endblock %}
     </div>
 
-    {% block content %}
-
-    {% endblock %}
 </body>
 
 </html>

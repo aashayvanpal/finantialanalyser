@@ -75,10 +75,19 @@
         border: 2px solid;
         border-radius: 5px;
         color: white;
+        margin-top: 10px;
         border-color: black;
+        box-shadow: 3px 8px #f3f3f3;
+
     }
 
-    .container{
+    #box-plans h4{
+        text-align: center;
+        color: black;
+        margin-bottom: 0px;
+    }
+
+    .container {
         display: flex;
         height: fit-content;
     }
@@ -104,6 +113,7 @@
         <button onclick=display() type="button" class="btn btn-success">Add New Plan</button>
     </div>
     <div id='box-plans'>
+        <h4>Ways for income </h4><br>
         <div id='row'>
             <button id='col1' onclick=empClick()>Employees</button></br>
             <div id="col2">Large Business</div></br>

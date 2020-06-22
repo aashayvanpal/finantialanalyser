@@ -8,28 +8,53 @@
 </head>
 
 <style>
-    #panel {
+    #mySidenav {
         background-color: #4c1873;
-        width: max-content;
-        height: 1000px;
-        margin-top: 10px;
+        margin-top: 70px;
+
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+
     }
 
-    #panel ul li {
+    #mySidenav ul li {
 
         padding: 10px;
         margin-bottom: 10px;
     }
 
-    #panel ul li a {
+    #mySidenav ul li a {
         color: white;
 
+        text-decoration: none;
+        font-size: 25px;
+        display: block;
+        transition: 0.3s;
+
+    }
+
+    #mySidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
     }
 
     #item-flex {
         display: flex;
 
     }
+
+
+
 
     #header {
         background-color: #D1B2CE;
@@ -42,13 +67,15 @@
         background-color: #D1B2CE;
         width: fit-content;
         top: 50%;
+        cursor: pointer;
     }
 
     #bar {
-        height: 5px;
+        height: 6px;
         background-color: black;
         width: 50px;
         margin: 5px;
+        margin-top: 9px;
     }
 
     body {
@@ -60,18 +87,18 @@
 
 <body>
     <div id="header">
-        <div id="burger">
+        <div id="burger" onclick="openNav()">
             <div id="bar"></div>
             <div id="bar"></div>
             <div id="bar"></div>
         </div>
-        This is heading
     </div>
     <div id="item-flex">
 
-        <div id="panel">
+        <div id="mySidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             <ul>
-                <li><a href="/">Go Home</a></li>
+                <li><a href="/">Home</a></li>
                 <li><a href="/dashboard">Dashboard</a></li>
                 <li><a href="/plans">Plans</a></li>
                 <li><a href="/form">Addition</a></li>
@@ -84,5 +111,15 @@
     </div>
 
 </body>
+
+<script>
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "180px";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+    }
+</script>
 
 </html>

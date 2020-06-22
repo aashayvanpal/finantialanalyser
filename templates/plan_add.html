@@ -20,6 +20,7 @@
         width: 78%;
         border-radius: 10px;
         color: black;
+        position: relative;
     }
 
     body {
@@ -70,17 +71,6 @@
         cursor: pointer;
     }
 
-    #box-plans {
-        width: min-content;
-        background-color: #dadada;
-        border: 2px solid;
-        border-radius: 5px;
-        color: white;
-        margin-top: 10px;
-        border-color: black;
-        box-shadow: 3px 8px 7px #f3f3f3;
-
-    }
 
     #box-plans h4 {
         text-align: center;
@@ -88,49 +78,63 @@
         margin-bottom: 0px;
     }
 
-    .container {
-        display: flex;
-        height: fit-content;
+    .lbl {
+        font-size: 30px;
+        margin-left: 40px;
+    }
+    .inp {
+        position: absolute;
+        right: 100px;
     }
 </style>
 
 
 <div class="container">
+    <h1 style="margin-left: 120px;">Add Plan!</h1>
 
     <div class="plan-list">
-        <h1>Listing Number of Plans -{{ number }}</h1>
-        <table style="border-collapse: collapse;">
-            <thead>
-                <tr>
-                    <td class='td-border'>Sl No</td>
-                    <td class='td-border'>Name</td>
-                    <td class='td-border'>Days Left</td>
-                    <td class='td-border'>Update</td>
-                    <td class='td-border'>Remove</td>
-                </tr>
-            </thead>
-        </table>
+        <form action="">
+            <label class='lbl' for="">Type
+                <select class="inp" name="" id="">
+                    <option value="#">Select</option>
+                </select>
+            </label>
+            <br>
+            <label class='lbl' for="">Date of Investment
+                <input class="inp" type="text">
+            </label>
+            <br>
+            <label class='lbl' for="">Date of Maturity
+                <input class="inp" type="text">
+            </label>
+            <br>
+            <label class='lbl' for="">Account number
+                <input class="inp" type="text">
+            </label>
+            <br>
+            <label class='lbl' for="">Bank name
+                <input class="inp" type="text">
+            </label>
+            <br>
+            <label class='lbl' for="">Location
+                <input class="inp" type="text">
+            </label>
+        </form>
         <br>
-        <button onclick=display() type="button" class="btn btn-success">Add New Plan</button>
-    </div>
-    <div id='box-plans'>
-        <h4>Ways for income </h4><br>
-        <div id='row'>
-            <button id='col1' onclick=empClick()>Employees</button></br>
-            <div id="col2">Large Business</div></br>
-        </div>
-        <div id='row'>
-            <div id="col1">Small Business</div>
-            <div id="col2">Investments</div>
-        </div>
+        <button onclick=document_upload() type="button" class="btn btn-success">Upload Documents</button>
 
+        <button onclick=display() type="button" class="btn btn-success">Add</button>
     </div>
-
 
 </div>
 <script type="text/javascript">
     function display() {
-        location.href = 'plans/add'
+        window.alert('Add Button clicked !')
+        location.href = "/plans"
+
+    }
+    function document_upload() {
+        window.alert('Upload Document button clicked !')
 
     }
     function empClick() {

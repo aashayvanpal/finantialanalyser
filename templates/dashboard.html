@@ -7,6 +7,7 @@
         width: 600px;
         margin-top: 30px;
         border: 2px solid #9466C6;
+        text-align: center;
     }
 
     #welcome-msg {
@@ -41,6 +42,9 @@
         box-shadow: 0px 9px 4px #9466C6;
         text-align: center;
     }
+    .num-disp{
+        font-size: 45px;
+    }
 </style>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
@@ -48,20 +52,23 @@
 <div id="below">
     <h1 id="welcome-msg">Hello Aashay!</h1>
     <div class='box'>
-        <div id="graph-disp">graph</div>
+        <div id="graph-disp">
+            <img src="https://cdn.ablebits.com/_img-blog/line-graph/line-graph-excel.png" alt="">
+            <br>Finantial graph
+        </div>
 
         <div id="stat">
 
             <div class="stat-box">
-                <h1>Max Balance Achieved : <br>{{ var }} </h1><br>
+                <h1>Max Balance Achieved : <br> <span class="num-disp">{{ max_bal }} </span></h1><br>
             </div>
             <!-- <h1>This is df : {{ df }} </h1> -->
 
             <div class="stat-box">
-                <h1>Current Balance :<br> {{ cur_bal }} </h1><br>
+                <h1>Current Balance :<br> <span class="num-disp">{{ cur_bal }} </span></h1><br>
             </div>
             <div class="stat-box">
-                <h1>Goal :<br> {{ need }} </h1><br>
+                <h1>Goal :<br> <span class="num-disp">{{ need }} </span></h1><br>
             </div>
         </div>
         <!-- <img src="" alt="image here /." /> -->

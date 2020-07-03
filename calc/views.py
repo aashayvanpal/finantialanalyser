@@ -42,6 +42,7 @@ def dashboard(request):
     return render(request,'dashboard.html',
     {
         "var":"30",
+        "max_bal":max(y),
         "df":df,
         "cur_bal":cur_bal,
         "need":(200000-cur_bal),

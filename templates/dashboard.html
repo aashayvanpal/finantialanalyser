@@ -1,20 +1,71 @@
 {% extends 'base.html'%}
 {% block content %}
 <style>
-    .box{
-        background-color: #9a98bb;
+    #graph-disp {
+        background-color: #ffffff;
+        height: 400px;
+        width: 600px;
+        margin-top: 30px;
+        border: 2px solid #9466C6;
+    }
+
+    #welcome-msg {
+        color: #9466c6;
+        text-align: center;
+    }
+
+    #below {
+        display: inline;
+    }
+
+    .box {
+        background-color: white;
+        margin-left: 230px;
+        margin-bottom: 20px;
+        width: 1000px;
+        border-radius: 25px;
+        height: 666px;
+        display: flex;
+        border: 2px solid #9466c6;
+    }
+
+    .stat-box {
+        background-color: white;
+        width: 350px;
+        border-radius: 25px;
+        height: 120px;
+        border: 2px solid #9466C6;
+        margin-left: 20px;
+        margin-top: 20px;
+        color: #9466C6;
+        box-shadow: 0px 9px 4px #9466C6;
+        text-align: center;
     }
 </style>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
-<div class='box'>
 
-    <h1>This is dashboard - {{ var }} </h1><br>
-    <!-- <h1>This is df : {{ df }} </h1> -->
-    <h1>This is cur_bal - {{ cur_bal }} </h1><br>
-    <h1>You need - {{ need }} </h1><br>
-    <!-- <img src="" alt="image here /." /> -->
-    <!-- <div style="background-image: url('file:///home/aashay/code/Python-Projects/finantialanalyser/balance.jpg');">  -->
+<div id="below">
+    <h1 id="welcome-msg">Hello Aashay!</h1>
+    <div class='box'>
+        <div id="graph-disp">graph</div>
+
+        <div id="stat">
+
+            <div class="stat-box">
+                <h1>Max Balance Achieved : <br>{{ var }} </h1><br>
+            </div>
+            <!-- <h1>This is df : {{ df }} </h1> -->
+
+            <div class="stat-box">
+                <h1>Current Balance :<br> {{ cur_bal }} </h1><br>
+            </div>
+            <div class="stat-box">
+                <h1>Goal :<br> {{ need }} </h1><br>
+            </div>
+        </div>
+        <!-- <img src="" alt="image here /." /> -->
+        <!-- <div style="background-image: url('file:///home/aashay/code/Python-Projects/finantialanalyser/balance.jpg');">  -->
+    </div>
 </div>
-
 {% endblock %}

@@ -68,6 +68,7 @@
         width: fit-content;
         top: 50%;
         cursor: pointer;
+        margin-left: 16px;
     }
 
     #bar {
@@ -78,8 +79,13 @@
         margin-top: 9px;
     }
 
+    #x-mark {
+        text-decoration: none;
+        color: white;
+    }
+
     body {
-        background-color: #AC43A2;
+        background-color: #C8C8C8;
         margin: 0px;
     }
 </style>
@@ -96,7 +102,7 @@
     <div id="item-flex">
 
         <div id="mySidenav">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a id="x-mark" href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             <ul>
                 <li><a href="/">Home</a></li>
                 <li><a href="/dashboard">Dashboard</a></li>

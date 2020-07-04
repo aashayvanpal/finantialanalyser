@@ -42,7 +42,13 @@
         box-shadow: 0px 9px 4px #9466C6;
         text-align: center;
     }
-    .num-disp{
+
+    .stat-box:hover {
+        background: linear-gradient(93.13deg, #8D00C5 15.1%, #B92B96 52.6%, #D66262 100%);
+        color: white;
+    }
+
+    .num-disp {
         font-size: 45px;
     }
 </style>
@@ -53,8 +59,41 @@
     <h1 id="welcome-msg">Hello Aashay!</h1>
     <div class='box'>
         <div id="graph-disp">
-            <img src="https://cdn.ablebits.com/_img-blog/line-graph/line-graph-excel.png" alt="">
-            <br>Finantial graph
+            <br>
+            <h2 style="color:#9466C6;">Finantial graph</h2>
+            <script>
+                window.onload = function () {
+
+                    var chart = new CanvasJS.Chart("chartContainer", {
+                        animationEnabled: true,
+                        theme: "light2",
+                        title: {
+                        },
+                        axisY: {
+                            includeZero: false
+                        },
+                        data: [{
+                            type: "line",
+                            indexLabelFontSize: 16,
+                            dataPoints: [
+
+                                { y: 74099 },
+                                { y: 72463 },
+                                { y: 72446 },
+                                { y: 71412, indexLabel: "\u2193 lowest", markerColor: "DarkSlateGrey", markerType: "cross" },
+                                { y: 71395 },
+                                { y: 85395, indexLabel: "\u2191 highest", markerColor: "red", markerType: "triangle" },
+
+                            ]
+                        }]
+                    });
+                    chart.render();
+
+                }
+            </script>
+
+            <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+            <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
         </div>
 
         <div id="stat">
